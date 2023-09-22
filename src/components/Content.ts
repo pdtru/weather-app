@@ -29,14 +29,15 @@ class Content {
     if (AppState.current) {
       high.innerText =
         (AppState.isCelsius
-          ? 'High: ' + AppState.forecast.forecastday[0].day.maxtemp_c.toString()
+          ? 'High: ' +
+            AppState.forecast?.forecastday[0].day.maxtemp_c.toString()
           : 'High: ' +
-            AppState.forecast.forecastday[0].day.maxtemp_f.toString()) + '°';
+            AppState.forecast?.forecastday[0].day.maxtemp_f.toString()) + '°';
       low.innerText =
         (AppState.isCelsius
-          ? 'Low: ' + AppState.forecast.forecastday[0].day.mintemp_c.toString()
+          ? 'Low: ' + AppState.forecast?.forecastday[0].day.mintemp_c.toString()
           : 'Low: ' +
-            AppState.forecast.forecastday[0].day.mintemp_f.toString()) + '°';
+            AppState.forecast?.forecastday[0].day.mintemp_f.toString()) + '°';
     } else {
       high.innerText = '--';
       low.innerText = '--';
@@ -77,7 +78,9 @@ class Content {
 
     const linkBackImg = document.createElement('img');
     linkBackImg.className = 'link-back-img';
-    linkBackImg.src = '//cdn.weatherapi.com/v4/images/weatherapi_logo.png';
+    linkBackImg.src = '//cdn.weatherapi.com/v4/images/weatherapi_logo.png'
+      ? '//cdn.weatherapi.com/v4/images/weatherapi_logo.png'
+      : '';
     linkBackImg.alt = 'Weather data by WeatherAPI.com';
 
     linkBack.append(linkBackImg);
