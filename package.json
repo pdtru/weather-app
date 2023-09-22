@@ -4,7 +4,6 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "deploy": "git subtree push --prefix dist origin weather-app-demo",
     "live": "webpack --watch"
