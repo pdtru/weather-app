@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import '/styles.css';
+import '/src/styles.css';
 import favicon from './assets/favicon.png';
 import WeatherApiService from './services/WeatherApiService';
 import GeolocationService from './services/GeolocationService';
